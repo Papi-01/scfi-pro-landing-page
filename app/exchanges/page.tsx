@@ -24,7 +24,7 @@ export default function ExchangesPage() {
               Exchange Database
             </h1>
             <p className="text-gray-300 text-lg">
-              Explore 15+ major cryptocurrency exchanges. Each exchange page includes company overview, services, revenue models, and how SCFI PRO participation connects.
+              Explore 15+ major cryptocurrency exchanges. Each exchange page includes company overview, services, revenue models, and how PROVEN participation connects.
             </p>
           </motion.div>
         </div>
@@ -39,7 +39,7 @@ export default function ExchangesPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex items-start gap-4 bg-blue-50 rounded-xl p-6"
           >
-            <Info className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+            <Info className="h-6 w-6 text-blue-600 shrink-0 mt-0.5" />
             <div>
               <h3 className="font-serif font-semibold text-navy mb-2">Exchange Participation Structure</h3>
               <ul className="text-sm text-gray-600 space-y-1">

@@ -15,12 +15,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "SCFI PRO | Your Gateway to Exchange Ownership",
-  description: "SCFI PRO enables individuals to participate in the revenue activity of major cryptocurrency trading platforms. Own shares of the world's leading crypto exchanges.",
-  keywords: ["crypto", "dividend", "exchange", "USDT", "investment", "cryptocurrency", "SCFI PRO"],
-  authors: [{ name: "SCFI PRO" }],
+  title: "PROVEN | Your Gateway to Exchange Ownership",
+  description: "PROVEN enables individuals to participate in the revenue activity of major cryptocurrency trading platforms. Own shares of the world's leading crypto exchanges.",
+  keywords: ["crypto", "dividend", "exchange", "USDT", "investment", "cryptocurrency", "PROVEN"],
+  authors: [{ name: "PROVEN" }],
   openGraph: {
-    title: "SCFI PRO | Your Gateway to Exchange Ownership",
+    title: "PROVEN | Your Gateway to Exchange Ownership",
     description: "Own shares of the world's leading crypto exchanges. Receive dividend-style returns linked to exchange activity.",
     type: "website",
   },

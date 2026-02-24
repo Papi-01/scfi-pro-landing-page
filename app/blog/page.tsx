@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+// import Link from "next/link";
 import { Header, Footer } from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,7 +19,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "SCFI PRO Launch Recap: 7 Countries in 7 Days",
+    title: "PROVEN Launch Recap: 7 Countries in 7 Days",
     excerpt: "Highlights from our global launch tour across Dubai, New York, Singapore, Lagos, Mumbai, Toronto, and London.",
     category: "News",
     date: "January 25, 2026",
@@ -51,8 +51,8 @@ const blogPosts = [
   },
   {
     id: 6,
-    title: "Welcome to SCFI PRO: A New Way to Participate in Crypto",
-    excerpt: "An introduction to SCFI PRO's dividend model and how it differs from traditional cryptocurrency trading.",
+    title: "Welcome to PROVEN: A New Way to Participate in Crypto",
+    excerpt: "An introduction to PROVEN's dividend model and how it differs from traditional cryptocurrency trading.",
     category: "Announcement",
     date: "January 1, 2026",
     readTime: "5 min read",
@@ -92,7 +92,7 @@ export default function BlogPage() {
               Insights & Updates
             </h1>
             <p className="text-gray-300 text-lg">
-              Stay informed with the latest news, educational content, and market insights from the SCFI PRO team.
+              Stay informed with the latest news, educational content, and market insights from the PROVEN team.
             </p>
           </motion.div>
         </div>
@@ -133,7 +133,7 @@ export default function BlogPage() {
                 <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer group">
                   {/* Placeholder image */}
                   <div className="aspect-video bg-gradient-to-br from-navy/10 to-gold/10 flex items-center justify-center">
-                    <span className="text-4xl font-serif font-bold text-navy/20">SCFI</span>
+                    <span className="text-4xl font-serif font-bold text-navy/20">PROVEN</span>
                   </div>
                   <CardContent className="pt-6">
                     <div className="flex items-center gap-2 mb-3">

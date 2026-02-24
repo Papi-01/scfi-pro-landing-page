@@ -16,7 +16,7 @@ const trustFeatures = [
   {
     icon: CalendarCheck,
     title: "Transparent Monthly Updates",
-    description: "Percentages change, and SCFI PRO posts the rates at the beginning of each month.",
+    description: "Percentages change, and PROVEN posts the rates at the beginning of each month.",
   },
   {
     icon: FileText,
@@ -41,7 +41,7 @@ const trustFeatures = [
   {
     icon: AlertCircle,
     title: "Risk Disclosure",
-    description: "SCFI PRO does not pretend crypto is risk-free. All investments carry risk and require understanding.",
+    description: "PROVEN does not pretend crypto is risk-free. All investments carry risk and require understanding.",
   },
   {
     icon: User,
@@ -66,7 +66,7 @@ export function TrustFeatures() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-gold font-medium text-sm uppercase tracking-wider">Why Trust SCFI PRO</span>
+          <span className="text-gold font-medium text-sm uppercase tracking-wider">Why Trust PROVEN</span>
           <h2 className="font-serif text-3xl md:text-4xl font-bold mt-2 mb-4">
             People Trust What Is Clear,<br className="hidden md:block" /> Consistent, and Verifiable
           </h2>

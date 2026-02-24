@@ -14,7 +14,7 @@ export function MicroBanner() {
       <div className="container mx-auto flex items-center justify-center gap-2">
         <Gift className="h-4 w-4 text-gold" />
         <span className="text-gray-300">
-          Receive a <span className="text-gold font-semibold">10% participation reward</span> when invited members join SCFI PRO.
+          Receive a <span className="text-gold font-semibold">10% participation reward</span> when invited members join PROVEN.
         </span>
       </div>
     </motion.div>

@@ -45,10 +45,10 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            SCFI PRO enables individuals to participate in the revenue activity
-            of major cryptocurrency trading platforms. Instead of trading
-            assets, members gain exposure to the infrastructure powering global
-            digital markets.
+            PROVEN enables individuals to participate in the revenue activity of
+            major cryptocurrency trading platforms. Instead of trading assets,
+            members gain exposure to the infrastructure powering global digital
+            markets.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -58,7 +58,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
-            <Link href="/auth/register">
+            <Link href="http://localhost:3001/register" target="_blank">
               <Button
                 size="lg"
                 className="bg-navy hover:bg-navy-light text-white px-8 h-12 text-base"
@@ -103,7 +103,7 @@ export function Hero() {
                       <div className="w-3 h-3 rounded-full bg-green-500" />
                     </div>
                     <span className="text-sm text-gray-400">
-                      SCFI PRO Dashboard
+                      PROVEN Dashboard
                     </span>
                   </div>
 

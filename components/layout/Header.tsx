@@ -17,7 +17,7 @@ import Image from "next/image";
 
 const navItems = [
   { href: "/exchanges", label: "Exchanges" },
-  { href: "/about", label: "About SCFI PRO" },
+  { href: "/about", label: "About PROVEN" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
   { href: "/security", label: "Security" },
@@ -39,10 +39,10 @@ export function Header() {
           <Link href="/" className="flex items-center justify-center gap-2">
             <div className="w-15 h-15 bg-white rounded-lg flex items-center justify-center">
               <Image
-                src="/logo-white.svg"
-                alt="scfi pro logo"
-                width={100}
-                height={100}
+                src="/logo.png"
+                alt="proven logo"
+                width={200}
+                height={200}
               />
             </div>
           </Link>
@@ -97,12 +97,12 @@ export function Header() {
 
             {/* Auth buttons */}
             <div className="hidden sm:flex items-center gap-2">
-              <Link href="/auth/login">
+              <Link href="http://localhost:3001/login" target="_blank">
                 <Button variant="ghost" size="sm">
                   Sign in
                 </Button>
               </Link>
-              <Link href="/auth/register">
+              <Link href="http://localhost:3001/register" target="_blank">
                 <Button
                   size="sm"
                   className="bg-navy hover:bg-navy-light text-white"

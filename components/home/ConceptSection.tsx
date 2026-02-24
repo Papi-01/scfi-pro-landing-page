@@ -37,7 +37,7 @@ export function ConceptSection() {
         >
           <span className="text-gold font-medium text-sm uppercase tracking-wider">The Concept</span>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mt-2 mb-4">
-            SCFI PRO Focuses on Participation,<br className="hidden md:block" /> Not Speculation
+            PROVEN Focuses on Participation,<br className="hidden md:block" /> Not Speculation
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             A structured investment model inside a high-risk market. Fixed entry ranges, variable monthly dividend rates, transparent monthly reviews.

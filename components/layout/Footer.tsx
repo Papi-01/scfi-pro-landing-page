@@ -7,14 +7,14 @@ import { Twitter, Linkedin, Youtube, Instagram, Send } from "lucide-react";
 const footerLinks = {
   company: [
     { href: "/about", label: "About" },
-    { href: "/about#roadmap", label: "Roadmap" },
-    { href: "/about#transparency", label: "Transparency" },
-    { href: "/about#reports", label: "Reports" },
+    { href: "/roadmap", label: "Roadmap" },
+    { href: "/transparency", label: "Transparency" },
+    { href: "/reports", label: "Reports" },
   ],
   learn: [
-    { href: "/about#how-it-works", label: "How it works" },
-    { href: "/about#exchange-economics", label: "Exchange economics" },
-    { href: "/blog", label: "Guides" },
+    { href: "/how-it-works", label: "How it works" },
+    { href: "/exchange-economics", label: "Exchange economics" },
+    { href: "/guides", label: "Guides" },
     { href: "/blog", label: "Blog" },
   ],
   support: [
@@ -51,14 +51,14 @@ export function Footer() {
                 <span className="text-navy font-serif font-bold text-xl">S</span>
               </div>
               <span className="font-serif font-bold text-xl text-white">
-                SCFI PRO
+                PROVEN
               </span>
             </Link>
             <p className="text-gray-400 text-sm mb-6 max-w-sm">
               Your gateway to exchange ownership. Own shares of the world&apos;s leading crypto exchanges and receive dividend-style returns.
             </p>
             <p className="text-gold text-sm font-medium">
-              SCFI PRO...your gateway to exchange ownership.
+              PROVEN...your gateway to exchange ownership.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export function Footer() {
         {/* Social and copyright */}
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} SCFI PRO. All rights reserved.
+            &copy; {new Date().getFullYear()} PROVEN. All rights reserved.
           </p>
 
           {/* Social links */}

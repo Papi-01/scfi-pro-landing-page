@@ -5,7 +5,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Eye, EyeOff, ArrowRight, Mail, Lock } from "lucide-react";
 
 export default function LoginPage() {
@@ -38,7 +44,9 @@ export default function LoginPage() {
           <div className="w-12 h-12 bg-navy rounded-xl flex items-center justify-center">
             <span className="text-gold font-serif font-bold text-2xl">S</span>
           </div>
-          <span className="font-serif font-bold text-2xl text-navy">SCFI PRO</span>
+          <span className="font-serif font-bold text-2xl text-navy">
+            PROVEN
+          </span>
         </Link>
 
         <Card className="shadow-xl border-0">
@@ -52,7 +60,10 @@ export default function LoginPage() {
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Email */}
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-medium text-gray-700"
+                >
                   Email Address
                 </label>
                 <div className="relative">
@@ -72,10 +83,16 @@ export default function LoginPage() {
               {/* Password */}
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <label htmlFor="password" className="text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="password"
+                    className="text-sm font-medium text-gray-700"
+                  >
                     Password
                   </label>
-                  <Link href="#" className="text-sm text-gold hover:text-gold-dark">
+                  <Link
+                    href="#"
+                    className="text-sm text-gold hover:text-gold-dark"
+                  >
                     Forgot password?
                   </Link>
                 </div>
@@ -95,7 +112,11 @@ export default function LoginPage() {
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                   >
-                    {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                    {showPassword ? (
+                      <EyeOff className="h-5 w-5" />
+                    ) : (
+                      <Eye className="h-5 w-5" />
+                    )}
                   </button>
                 </div>
               </div>
@@ -128,7 +149,11 @@ export default function LoginPage() {
             {/* Register link */}
             <p className="text-center text-sm text-gray-600 mt-6">
               Don&apos;t have an account?{" "}
-              <Link href="/auth/register" className="text-gold hover:text-gold-dark font-semibold">
+              <Link
+                href="http://localhost:3001/register"
+                target="_blank"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
                 Create Account
               </Link>
             </p>
@@ -138,9 +163,13 @@ export default function LoginPage() {
         {/* Footer */}
         <p className="text-center text-xs text-gray-500 mt-6">
           By signing in, you agree to our{" "}
-          <Link href="#" className="text-navy hover:underline">Terms of Service</Link>
-          {" "}and{" "}
-          <Link href="#" className="text-navy hover:underline">Privacy Policy</Link>
+          <Link href="#" className="text-navy hover:underline">
+            Terms of Service
+          </Link>{" "}
+          and{" "}
+          <Link href="#" className="text-navy hover:underline">
+            Privacy Policy
+          </Link>
         </p>
       </motion.div>
     </main>

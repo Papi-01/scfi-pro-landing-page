@@ -39,7 +39,7 @@ const awards = [
 const trustFeatures = [
   {
     title: "Transparent Monthly Updates",
-    description: "Percentages change, and SCFI PRO posts the rates at the beginning of each month.",
+    description: "Percentages change, and PROVEN posts the rates at the beginning of each month.",
   },
   {
     title: "Monthly Performance Review",
@@ -59,7 +59,7 @@ const trustFeatures = [
   },
   {
     title: "Risk Disclosure",
-    description: "SCFI PRO does not pretend crypto is risk-free. All investments carry risk and require understanding.",
+    description: "PROVEN does not pretend crypto is risk-free. All investments carry risk and require understanding.",
   },
   {
     title: "Public-Facing Leadership",
@@ -85,18 +85,18 @@ export default function AboutPage() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <Badge className="bg-gold/20 text-gold mb-4">About SCFI PRO</Badge>
+            <Badge className="bg-gold/20 text-gold mb-4">About PROVEN</Badge>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">
               Your Gateway to Exchange Ownership
             </h1>
             <p className="text-gray-300 text-lg">
-              SCFI PRO is a crypto dividend platform introduced in August 2025 and officially launched in January 2026 by Kim Sun Cho.
+              PROVEN is a crypto dividend platform introduced in August 2025 and officially launched in January 2026 by Kim Sun Cho.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* What is SCFI PRO */}
+      {/* What is PROVEN */}
       <section className="py-16 bg-white" id="how-it-works">
         <div className="container mx-auto px-4">
           <motion.div
@@ -107,14 +107,14 @@ export default function AboutPage() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="font-serif text-3xl font-bold text-navy mb-8 text-center">
-              What is SCFI PRO?
+              What is PROVEN?
             </h2>
             <div className="prose prose-lg max-w-none text-gray-600">
               <p className="mb-6">
-                SCFI PRO is built around one simple idea: Instead of only buying coins that rise and fall, users can use USDT to access dividend-style returns linked to the activity of major cryptocurrency exchanges.
+                PROVEN is built around one simple idea: Instead of only buying coins that rise and fall, users can use USDT to access dividend-style returns linked to the activity of major cryptocurrency exchanges.
               </p>
               <p className="mb-6">
-                People trade every day, in bull markets and bear markets. Exchanges earn revenue from trading activity, fees, spreads, and services. SCFI PRO is designed to let everyday users benefit from that &ldquo;exchange economy&rdquo; and receive dividend payouts in USDT.
+                People trade every day, in bull markets and bear markets. Exchanges earn revenue from trading activity, fees, spreads, and services. PROVEN is designed to let everyday users benefit from that &ldquo;exchange economy&rdquo; and receive dividend payouts in USDT.
               </p>
               <div className="bg-navy text-white p-6 rounded-xl my-8">
                 <p className="text-lg font-serif font-semibold text-center">
@@ -137,7 +137,7 @@ export default function AboutPage() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="font-serif text-3xl font-bold text-navy mb-8 text-center">
-              What SCFI PRO Does
+              What PROVEN Does
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <Card className="text-center">
@@ -203,7 +203,7 @@ export default function AboutPage() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="font-serif text-3xl font-bold text-navy mb-8 text-center">
-              Understanding SCFI PRO
+              Understanding PROVEN
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <Card>
@@ -229,7 +229,7 @@ export default function AboutPage() {
                     Explained to a 60-Year-Old
                   </h3>
                   <p className="text-sm text-gray-600 mb-4">
-                    Stocks pay dividends when businesses make profits. Crypto usually feels like price gambling to many people. SCFI PRO is positioned like a dividend system inside crypto.
+                    Stocks pay dividends when businesses make profits. Crypto usually feels like price gambling to many people. PROVEN is positioned like a dividend system inside crypto.
                   </p>
                   <div className="bg-gray-50 p-4 rounded-lg text-sm">
                     <p className="font-medium text-navy mb-2">The key difference:</p>
@@ -257,7 +257,7 @@ export default function AboutPage() {
               7 Countries in 7 Days
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              SCFI PRO&apos;s launch phase focused on visibility, education, and community building through public campaigns and tours.
+              PROVEN&apos;s launch phase focused on visibility, education, and community building through public campaigns and tours.
             </p>
           </motion.div>
 
@@ -294,7 +294,7 @@ export default function AboutPage() {
             className="text-center mb-12"
           >
             <h2 className="font-serif text-3xl font-bold text-navy mb-4">
-              Why People Trust SCFI PRO
+              Why People Trust PROVEN
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               People trust what is clear, consistent, and verifiable.
@@ -346,7 +346,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-serif text-2xl font-bold mb-2">Kim Sun Cho</h3>
-                    <p className="text-gray-300">Founder & CEO of SCFI PRO</p>
+                    <p className="text-gray-300">Founder & CEO of PROVEN</p>
                     <div className="flex flex-wrap gap-2 mt-4">
                       <Badge className="bg-white/10">Born September 14, 1969</Badge>
                       <Badge className="bg-white/10">Singaporean-Emirati</Badge>
@@ -359,7 +359,7 @@ export default function AboutPage() {
               <CardContent className="pt-8">
                 <div className="prose prose-gray max-w-none">
                   <p className="text-gray-600 mb-6">
-                    Kim Sun Cho is a Singaporean–Emirati technology entrepreneur, financier, and blockchain executive. He is best known as the founder and chief executive officer of SCFI PRO, a digital finance platform described as the world&apos;s first crypto dividend exchange.
+                    Kim Sun Cho is a Singaporean–Emirati technology entrepreneur, financier, and blockchain executive. He is best known as the founder and chief executive officer of PROVEN, a digital finance platform described as the world&apos;s first crypto dividend exchange.
                   </p>
 
                   <h4 className="font-serif font-semibold text-navy flex items-center gap-2 mb-4">

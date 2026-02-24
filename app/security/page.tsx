@@ -92,7 +92,7 @@ export default function SecurityPage() {
               Your Security is Our Priority
             </h1>
             <p className="text-gray-300 text-lg">
-              SCFI PRO is built on a foundation of transparency, security, and trust. Learn about the measures we take to protect your investments.
+              PROVEN is built on a foundation of transparency, security, and trust. Learn about the measures we take to protect your investments.
             </p>
           </motion.div>
         </div>
@@ -272,7 +272,7 @@ export default function SecurityPage() {
             <div>
               <h3 className="font-serif font-semibold text-navy mb-2">Important Risk Disclosure</h3>
               <p className="text-gray-600 text-sm mb-4">
-                SCFI PRO is a financial platform operating in the cryptocurrency space. Like stocks, forex, and other financial instruments, participation carries inherent risks. Dividend rates fluctuate based on market conditions and are not guaranteed.
+                PROVEN is a financial platform operating in the cryptocurrency space. Like stocks, forex, and other financial instruments, participation carries inherent risks. Dividend rates fluctuate based on market conditions and are not guaranteed.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li className="flex items-center gap-2">

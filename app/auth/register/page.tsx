@@ -56,7 +56,7 @@ export default function RegisterPage() {
               <div className="w-12 h-12 bg-navy rounded-xl flex items-center justify-center">
                 <span className="text-gold font-serif font-bold text-2xl">S</span>
               </div>
-              <span className="font-serif font-bold text-2xl text-navy">SCFI PRO</span>
+              <span className="font-serif font-bold text-2xl text-navy">PROVEN</span>
             </Link>
 
             <h1 className="font-serif text-4xl font-bold text-navy mb-4">
@@ -89,7 +89,7 @@ export default function RegisterPage() {
               <p className="text-gray-600 italic mb-4">
                 &ldquo;It feels like the stock mindset but in crypto. The monthly review post is what convinced me.&rdquo;
               </p>
-              <p className="text-sm text-gray-500">— SCFI PRO Member</p>
+              <p className="text-sm text-gray-500">— PROVEN Member</p>
             </div>
           </motion.div>
 
@@ -104,7 +104,7 @@ export default function RegisterPage() {
               <div className="w-12 h-12 bg-navy rounded-xl flex items-center justify-center">
                 <span className="text-gold font-serif font-bold text-2xl">S</span>
               </div>
-              <span className="font-serif font-bold text-2xl text-navy">SCFI PRO</span>
+              <span className="font-serif font-bold text-2xl text-navy">PROVEN</span>
             </Link>
 
             <Card className="shadow-xl border-0">

@@ -14,7 +14,7 @@ import { HelpCircle, AlertTriangle } from "lucide-react";
 
 const faqs = [
   {
-    question: "What is SCFI PRO?",
+    question: "What is PROVEN?",
     answer: "A USDT-based dividend platform designed to give users dividend-style exposure linked to exchange market activity. Instead of trading cryptocurrencies directly, members gain exposure to the infrastructure powering global digital markets.",
   },
   {
@@ -34,12 +34,12 @@ const faqs = [
     answer: "Yes, you can withdraw your capital before the 12-month cycle completes, but an early capital withdrawal fee applies. There are reduced fee rules based on holding period — the longer you hold, the lower the fee.",
   },
   {
-    question: "Is SCFI PRO risk-free?",
-    answer: "No. Like stocks, forex, crypto, and fintech products, SCFI PRO carries risk. Users should understand what they are investing in. We strongly recommend reading the exchange summaries and understanding the model before participating.",
+    question: "Is PROVEN risk-free?",
+    answer: "No. Like stocks, forex, crypto, and fintech products, PROVEN carries risk. Users should understand what they are investing in. We strongly recommend reading the exchange summaries and understanding the model before participating.",
   },
   {
     question: "Where can I learn about each exchange?",
-    answer: "SCFI PRO provides comprehensive exchange summaries, history, and recent activity inside the website and app. Each exchange has a dedicated page where you can learn about the company, its services, revenue model, and market presence.",
+    answer: "PROVEN provides comprehensive exchange summaries, history, and recent activity inside the website and app. Each exchange has a dedicated page where you can learn about the company, its services, revenue model, and market presence.",
   },
   {
     question: "How many exchanges can I participate in?",
@@ -97,7 +97,7 @@ export default function FAQPage() {
               Frequently Asked Questions
             </h1>
             <p className="text-gray-300 text-lg">
-              Find answers to common questions about SCFI PRO, how dividends work, and our participation structure.
+              Find answers to common questions about PROVEN, how dividends work, and our participation structure.
             </p>
           </motion.div>
         </div>
@@ -190,7 +190,7 @@ export default function FAQPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">
-                    SCFI PRO positions work like yearly participation subscriptions:
+                    PROVEN positions work like yearly participation subscriptions:
                   </p>
                   <div className="flex flex-wrap items-center gap-2 text-sm">
                     <span className="bg-white/10 px-3 py-1 rounded-full">You choose an exchange</span>
@@ -219,7 +219,7 @@ export default function FAQPage() {
             <div>
               <h3 className="font-serif font-semibold text-navy mb-2">Risk Disclosure</h3>
               <p className="text-gray-600 text-sm">
-                SCFI PRO does not pretend crypto is risk-free. It frames itself as another financial system, like stocks, forex, crypto, and fintech. All have risk, all require understanding. Past performance does not guarantee future results. Only invest what you can afford to lose.
+                PROVEN does not pretend crypto is risk-free. It frames itself as another financial system, like stocks, forex, crypto, and fintech. All have risk, all require understanding. Past performance does not guarantee future results. Only invest what you can afford to lose.
               </p>
             </div>
           </div>

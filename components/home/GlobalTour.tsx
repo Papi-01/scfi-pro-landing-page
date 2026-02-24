@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 const tourStops = [
   { day: 1, city: "Dubai", country: "UAE", date: "16/01", flag: "🇦🇪" },
@@ -29,7 +29,7 @@ export function GlobalTour() {
             7 Countries in 7 Days
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            SCFI PRO&apos;s launch phase focused on visibility, education, and community building through public campaigns and tours in January 2026.
+            PROVEN&apos;s launch phase focused on visibility, education, and community building through public campaigns and tours in January 2026.
           </p>
         </motion.div>
 
@@ -77,7 +77,7 @@ export function GlobalTour() {
           viewport={{ once: true }}
           className="text-center text-gray-500 text-sm mt-12 max-w-xl mx-auto"
         >
-          The tour was designed to introduce SCFI PRO&apos;s dividend model, educate the public, and position the brand as a serious global project.
+          The tour was designed to introduce PROVEN&apos;s dividend model, educate the public, and position the brand as a serious global project.
         </motion.p>
       </div>
     </section>
