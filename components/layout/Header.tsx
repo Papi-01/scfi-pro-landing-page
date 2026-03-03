@@ -97,12 +97,12 @@ export function Header() {
 
             {/* Auth buttons */}
             <div className="hidden sm:flex items-center gap-2">
-              <Link href="http://localhost:3001/login" target="_blank">
+              <Link href="https://user.provenexchange.com/login" target="_blank">
                 <Button variant="ghost" size="sm">
                   Sign in
                 </Button>
               </Link>
-              <Link href="http://localhost:3001/register" target="_blank">
+              <Link href="https://user.provenexchange.com/register" target="_blank">
                 <Button
                   size="sm"
                   className="bg-navy hover:bg-navy-light text-white"

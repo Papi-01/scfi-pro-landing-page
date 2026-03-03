@@ -58,7 +58,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
-            <Link href="http://localhost:3001/register" target="_blank">
+            <Link href="https://user.provenexchange.com/register" target="_blank">
               <Button
                 size="lg"
                 className="bg-navy hover:bg-navy-light text-white px-8 h-12 text-base"

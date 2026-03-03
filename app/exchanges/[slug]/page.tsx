@@ -292,7 +292,7 @@ export default function ExchangeDetailPage() {
 
                     {/* CTA */}
                     <div className="pt-4 border-t space-y-3">
-                      <Link href="/auth/register" className="block">
+                      <Link href="https://user.provenexchange.com/register" target="_blank" className="block">
                         <Button className="w-full bg-gold hover:bg-gold-dark text-navy font-semibold">
                           Start Participating
                           <ArrowRight className="ml-2 h-4 w-4" />

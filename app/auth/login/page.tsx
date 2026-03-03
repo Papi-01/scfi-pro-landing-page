@@ -150,7 +150,7 @@ export default function LoginPage() {
             <p className="text-center text-sm text-gray-600 mt-6">
               Don&apos;t have an account?{" "}
               <Link
-                href="http://localhost:3001/register"
+                href="https://user.provenexchange.com/register"
                 target="_blank"
                 className="text-gold hover:text-gold-dark font-semibold"
               >
