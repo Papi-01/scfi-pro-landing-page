@@ -149,12 +149,12 @@ export function Header() {
 
                   {/* Mobile Auth */}
                   <div className="flex flex-col gap-2 mt-6 pt-6 border-t">
-                    <Link href="/auth/login" className="w-full">
+                    <Link href="https://user.provenexchange.com/login" target="_blank" className="w-full">
                       <Button variant="outline" className="w-full">
                         Sign in
                       </Button>
                     </Link>
-                    <Link href="/auth/register" className="w-full">
+                    <Link href="https://user.provenexchange.com/register" target="_blank" className="w-full">
                       <Button className="w-full bg-navy hover:bg-navy-light text-white">
                         Sign up
                       </Button>
