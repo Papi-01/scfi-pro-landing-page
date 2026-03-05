@@ -7,7 +7,7 @@ import {
   MonthlyReports,
   Testimonials,
   TrustFeatures,
-  GlobalTour,
+  // GlobalTour,
 } from "@/components/home";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       <ShiftSection />
       <ConceptSection />
       <MonthlyReports />
-      <GlobalTour />
+      {/* <GlobalTour /> */}
       <Testimonials />
       <TrustFeatures />
       <Footer />

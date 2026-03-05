@@ -187,9 +187,9 @@ export default function RoadmapPage() {
                       {phase.items.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start gap-2 text-sm">
                           {item.completed ? (
-                            <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
                           ) : (
-                            <Circle className="h-4 w-4 text-gray-300 mt-0.5 flex-shrink-0" />
+                            <Circle className="h-4 w-4 text-gray-300 mt-0.5 shrink-0" />
                           )}
                           <span className={item.completed ? "text-gray-600" : "text-gray-500"}>
                             {item.text}
