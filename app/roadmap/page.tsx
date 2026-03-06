@@ -9,56 +9,56 @@ import { CheckCircle, Circle, Clock, Rocket, Target, Globe, Users, Shield } from
 const roadmapPhases = [
   {
     phase: "Phase 1",
-    title: "Foundation & Launch",
+    title: "Infrastructure Foundation",
     period: "Q3 2025 - Q1 2026",
     status: "completed",
     items: [
-      { text: "Platform concept development", completed: true },
-      { text: "Core infrastructure build", completed: true },
-      { text: "Security architecture implementation", completed: true },
-      { text: "Initial exchange partnerships", completed: true },
-      { text: "7-country global launch tour", completed: true },
-      { text: "Platform public launch", completed: true },
+      { text: "Exchange revenue index architecture", completed: true },
+      { text: "Tiered client verification system (KYC/AML)", completed: true },
+      { text: "Segregated wallet infrastructure", completed: true },
+      { text: "Initial exchange revenue partnerships", completed: true },
+      { text: "Professional dashboard development", completed: true },
+      { text: "U.S. compliance framework implementation", completed: true },
     ],
   },
   {
     phase: "Phase 2",
-    title: "Growth & Expansion",
+    title: "Structured Access Expansion",
     period: "Q2 2026 - Q4 2026",
     status: "current",
     items: [
-      { text: "Mobile app development (iOS & Android)", completed: false },
-      { text: "Additional exchange partnerships", completed: false },
-      { text: "Enhanced analytics dashboard", completed: false },
-      { text: "Multi-language support", completed: false },
-      { text: "Community ambassador program", completed: false },
-      { text: "Educational content expansion", completed: false },
+      { text: "Enhanced portfolio term structures (30/90/180-day)", completed: false },
+      { text: "Professional financial reporting (PDF statements)", completed: false },
+      { text: "Auto-compounding account features", completed: false },
+      { text: "Institutional-grade disclosure pages", completed: false },
+      { text: "Advanced distribution tracking dashboard", completed: false },
+      { text: "Multi-tier withdrawal governance system", completed: false },
     ],
   },
   {
     phase: "Phase 3",
-    title: "Advanced Features",
+    title: "Professional & Institutional Access",
     period: "Q1 2027 - Q2 2027",
     status: "upcoming",
     items: [
-      { text: "Advanced portfolio management tools", completed: false },
-      { text: "Automated reinvestment options", completed: false },
-      { text: "Premium tier introduction", completed: false },
-      { text: "API access for institutional users", completed: false },
-      { text: "Enhanced reporting features", completed: false },
+      { text: "Level 2 enhanced verification (biometric)", completed: false },
+      { text: "Long-term digital wealth planning tools", completed: false },
+      { text: "Crypto retirement account structures", completed: false },
+      { text: "Institutional capital management APIs", completed: false },
+      { text: "Advanced risk disclosure frameworks", completed: false },
     ],
   },
   {
     phase: "Phase 4",
-    title: "Global Scale",
+    title: "Market-Neutral Scale",
     period: "Q3 2027 & Beyond",
     status: "upcoming",
     items: [
-      { text: "Expansion to 50+ exchanges", completed: false },
-      { text: "Regional compliance frameworks", completed: false },
-      { text: "Institutional partnership program", completed: false },
-      { text: "Advanced AI-driven insights", completed: false },
-      { text: "Global financial services integration", completed: false },
+      { text: "Expanded exchange revenue index coverage", completed: false },
+      { text: "Regional regulatory alignment frameworks", completed: false },
+      { text: "Institutional partnership program launch", completed: false },
+      { text: "SPV and reserve fund transparency reporting", completed: false },
+      { text: "Global infrastructure revenue integration", completed: false },
     ],
   },
 ];
@@ -66,23 +66,23 @@ const roadmapPhases = [
 const visionCards = [
   {
     icon: Target,
-    title: "Mission",
-    description: "To democratize access to exchange-based dividend returns, making institutional-grade financial products accessible to everyone.",
+    title: "Infrastructure Focus",
+    description: "Invest in digital financial infrastructure, not price speculation. Revenue-sourced distributions backed by real exchange activity.",
   },
   {
     icon: Globe,
-    title: "Global Reach",
-    description: "Building a worldwide community of investors who benefit from the infrastructure powering digital markets.",
+    title: "Market-Neutral Model",
+    description: "Profits accrue regardless of price fluctuations. Structured exposure to exchange performance without direct equity.",
   },
   {
     icon: Users,
-    title: "Community First",
-    description: "Every feature we build is designed with our users in mind, ensuring transparency and ease of use.",
+    title: "Professional Gateway",
+    description: "Serving retail, accredited, and institutional clients through tiered accounts ensuring appropriate investor engagement.",
   },
   {
     icon: Shield,
-    title: "Security & Trust",
-    description: "Maintaining the highest standards of security and operational transparency at every step.",
+    title: "Transparent Operations",
+    description: "Clear reporting, segregated accounts, structured pools. Operating under U.S. jurisdiction with SEC-conscious framework.",
   },
 ];
 
@@ -100,12 +100,12 @@ export default function RoadmapPage() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <Badge className="bg-gold/20 text-gold mb-4">Our Journey</Badge>
+            <Badge className="bg-gold/20 text-gold mb-4">Infrastructure Development</Badge>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
               Product Roadmap
             </h1>
             <p className="text-gray-300 text-lg">
-              Follow our journey as we continue to build and expand the PROVEN platform. See what we&apos;ve accomplished and what&apos;s coming next.
+              America&apos;s leading Digital Asset Infrastructure Investment Firm. Track our structured development as we expand access to crypto exchange revenue systems.
             </p>
           </motion.div>
         </div>
@@ -149,7 +149,7 @@ export default function RoadmapPage() {
               Development Timeline
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our phased approach ensures stable, secure growth while continuously adding value for our users.
+              A structured, governance-driven approach designed for predictable, revenue-backed participation and long-term sustainable growth.
             </p>
           </motion.div>
 
@@ -215,10 +215,10 @@ export default function RoadmapPage() {
             viewport={{ once: true }}
           >
             <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">
-              Be Part of Our Journey
+              Participate in Exchange Revenue
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto mb-6">
-              Join PROVEN today and grow with us as we continue to expand and innovate in the crypto dividend space.
+              Stop speculating, start participating. Access structured exposure to crypto exchange revenue with institutional-grade transparency and governance.
             </p>
           </motion.div>
         </div>
