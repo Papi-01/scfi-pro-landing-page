@@ -34,8 +34,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6"
           >
-            Own Shares of the World&apos;s{" "}
-            <span className="text-gradient-gold">Leading Crypto Exchanges</span>
+            Own The System That Earns From Trading Activity,{" "}
+            <span className="text-gradient-gold">Not Just Coins</span>
           </motion.h1>
 
           {/* Summary */}
@@ -45,10 +45,11 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            PROVEN enables individuals to participate in the revenue activity of
-            major cryptocurrency trading platforms. Instead of trading assets,
-            members gain exposure to the infrastructure powering global digital
-            markets.
+            Instead of only buying coins that rise and fall, use USDT to access
+            dividend-style returns linked to the activity of major cryptocurrency
+            exchanges. People trade every day — in bull markets and bear markets.
+            PROVEN lets you benefit from that exchange economy and receive
+            dividend payouts in USDT.
           </motion.p>
 
           {/* CTA Buttons */}

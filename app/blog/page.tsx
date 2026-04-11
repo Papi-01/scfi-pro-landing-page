@@ -1,65 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-// import Link from "next/link";
+import Link from "next/link";
+import Image from "next/image";
 import { Header, Footer } from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { blogPosts } from "@/lib/blog-data";
 
-// Placeholder blog posts
-const blogPosts = [
-  {
-    id: 1,
-    title: "Understanding Exchange Economics: How Crypto Platforms Generate Revenue",
-    excerpt: "A deep dive into the various revenue streams that power cryptocurrency exchanges, from trading fees to ecosystem services.",
-    category: "Education",
-    date: "January 28, 2026",
-    readTime: "8 min read",
-  },
-  {
-    id: 2,
-    title: "PROVEN Launch Recap: 7 Countries in 7 Days",
-    excerpt: "Highlights from our global launch tour across Dubai, New York, Singapore, Lagos, Mumbai, Toronto, and London.",
-    category: "News",
-    date: "January 25, 2026",
-    readTime: "5 min read",
-  },
-  {
-    id: 3,
-    title: "The Difference Between Trading and Participating",
-    excerpt: "Why the shift from trader mindset to shareholder mindset could change how you think about cryptocurrency exposure.",
-    category: "Insights",
-    date: "January 20, 2026",
-    readTime: "6 min read",
-  },
-  {
-    id: 4,
-    title: "Monthly Report: January 2026 Exchange Activity",
-    excerpt: "Our first monthly transparency report covering exchange performance, dividend payouts, and participant growth.",
-    category: "Reports",
-    date: "January 15, 2026",
-    readTime: "4 min read",
-  },
-  {
-    id: 5,
-    title: "How to Choose the Right Exchange for Your Portfolio",
-    excerpt: "A guide to evaluating different exchange plans based on your investment goals, risk tolerance, and preferences.",
-    category: "Guide",
-    date: "January 10, 2026",
-    readTime: "7 min read",
-  },
-  {
-    id: 6,
-    title: "Welcome to PROVEN: A New Way to Participate in Crypto",
-    excerpt: "An introduction to PROVEN's dividend model and how it differs from traditional cryptocurrency trading.",
-    category: "Announcement",
-    date: "January 1, 2026",
-    readTime: "5 min read",
-  },
-];
-
-const categories = ["All", "Education", "News", "Insights", "Reports", "Guide", "Announcement"];
+const allCategories = ["All", "News", "Insights", "Education"];
 
 const getCategoryColor = (category: string) => {
   const colors: Record<string, string> = {
@@ -74,6 +24,9 @@ const getCategoryColor = (category: string) => {
 };
 
 export default function BlogPage() {
+  const featured = blogPosts[0];
+  const rest = blogPosts.slice(1);
+
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />
@@ -89,10 +42,11 @@ export default function BlogPage() {
           >
             <Badge className="bg-gold/20 text-gold mb-4">Blog</Badge>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-              Insights & Updates
+              Insights &amp; Updates
             </h1>
             <p className="text-gray-300 text-lg">
-              Stay informed with the latest news, educational content, and market insights from the PROVEN team.
+              Stay informed with the latest news, educational content, and market
+              insights from the PROVEN team.
             </p>
           </motion.div>
         </div>
@@ -102,7 +56,7 @@ export default function BlogPage() {
       <section className="bg-white border-b sticky top-16 z-40">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
+            {allCategories.map((category) => (
               <button
                 key={category}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
@@ -118,59 +72,117 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* Featured Post */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link href={`/blog/${featured.slug}`} className="group block">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="grid md:grid-cols-2">
+                  <div className="relative aspect-video md:aspect-auto">
+                    <Image
+                      src={featured.image}
+                      alt={featured.imageAlt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      priority
+                    />
+                  </div>
+                  <div className="p-8 md:p-10 flex flex-col justify-center">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Badge className={getCategoryColor(featured.category)}>
+                        {featured.category}
+                      </Badge>
+                      <span className="text-xs text-gold font-semibold uppercase tracking-wide">
+                        Featured
+                      </span>
+                    </div>
+                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-navy mb-3 group-hover:text-gold transition-colors leading-tight">
+                      {featured.title}
+                    </h2>
+                    <p className="text-gray-600 mb-6 line-clamp-3">
+                      {featured.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4 text-xs text-gray-500">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="h-3 w-3" />
+                          {featured.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          {featured.readTime}
+                        </span>
+                      </div>
+                      <span className="inline-flex items-center gap-1 text-gold font-medium text-sm group-hover:gap-2 transition-all">
+                        Read More <ArrowRight className="h-4 w-4" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Blog Posts Grid */}
-      <section className="py-16">
+      <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((post, index) => (
+            {rest.map((post, index) => (
               <motion.div
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.5, delay: index * 0.04 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer group">
-                  {/* Placeholder image */}
-                  <div className="aspect-video bg-gradient-to-br from-navy/10 to-gold/10 flex items-center justify-center">
-                    <span className="text-4xl font-serif font-bold text-navy/20">PROVEN</span>
-                  </div>
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Badge className={getCategoryColor(post.category)}>
-                        {post.category}
-                      </Badge>
+                <Link href={`/blog/${post.slug}`} className="group block h-full">
+                  <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer overflow-hidden">
+                    {/* Image */}
+                    <div className="relative aspect-video overflow-hidden">
+                      <Image
+                        src={post.image}
+                        alt={post.imageAlt}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                    <h3 className="font-serif text-lg font-semibold text-navy mb-2 group-hover:text-gold transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between text-xs text-gray-500">
-                      <div className="flex items-center gap-4">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="h-3 w-3" />
-                          {post.date}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="h-3 w-3" />
-                          {post.readTime}
-                        </span>
+                    <CardContent className="pt-5">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Badge className={getCategoryColor(post.category)}>
+                          {post.category}
+                        </Badge>
                       </div>
-                      <ArrowRight className="h-4 w-4 text-gold opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                  </CardContent>
-                </Card>
+                      <h3 className="font-serif text-base font-semibold text-navy mb-2 group-hover:text-gold transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <div className="flex items-center gap-3">
+                          <span className="flex items-center gap-1">
+                            <Calendar className="h-3 w-3" />
+                            {post.date}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="h-3 w-3" />
+                            {post.readTime}
+                          </span>
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
-          </div>
-
-          {/* Load More */}
-          <div className="text-center mt-12">
-            <button className="px-8 py-3 bg-navy text-white rounded-full font-medium hover:bg-navy-light transition-colors">
-              Load More Articles
-            </button>
           </div>
         </div>
       </section>
@@ -185,11 +197,10 @@ export default function BlogPage() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="font-serif text-3xl font-bold mb-4">
-              Stay Updated
-            </h2>
+            <h2 className="font-serif text-3xl font-bold mb-4">Stay Updated</h2>
             <p className="text-gray-400 mb-8">
-              Subscribe to receive the latest insights, market updates, and educational content directly to your inbox.
+              Subscribe to receive the latest insights, market updates, and
+              educational content directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <input
