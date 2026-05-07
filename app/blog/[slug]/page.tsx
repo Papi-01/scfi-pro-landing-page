@@ -1,26 +1,20 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Header, Footer } from "@/components/layout";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
-import { getBlogPost, getRelatedPosts } from "@/lib/blog-data";
-
-const getCategoryColor = (category: string) => {
-  const colors: Record<string, string> = {
-    Education: "bg-blue-100 text-blue-700",
-    News: "bg-green-100 text-green-700",
-    Insights: "bg-purple-100 text-purple-700",
-    Reports: "bg-orange-100 text-orange-700",
-    Guide: "bg-cyan-100 text-cyan-700",
-    Announcement: "bg-gold/20 text-gold",
-  };
-  return colors[category] || "bg-gray-100 text-gray-700";
-};
+import { Calendar, Clock, ArrowLeft, ArrowRight, Loader2 } from "lucide-react";
+import {
+  getBlogBySlug,
+  getBlogs,
+  formatDate,
+  estimateReadTime,
+  type ApiBlog,
+} from "@/lib/api/blog";
 
 export default function BlogPostPage({
   params,
@@ -28,13 +22,49 @@ export default function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = use(params);
-  const post = getBlogPost(slug);
+  const [post, setPost] = useState<ApiBlog | null>(null);
+  const [related, setRelated] = useState<ApiBlog[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [notFoundFlag, setNotFoundFlag] = useState(false);
 
-  if (!post) {
+  useEffect(() => {
+    setLoading(true);
+    getBlogBySlug(slug)
+      .then((data) => {
+        if (!data || (data as { statusCode?: number }).statusCode === 404) {
+          setNotFoundFlag(true);
+          return;
+        }
+        setPost(data);
+        return getBlogs(1, 10);
+      })
+      .then((list) => {
+        if (list) {
+          setRelated(
+            (list.data ?? []).filter((p) => p.slug !== slug).slice(0, 3)
+          );
+        }
+      })
+      .finally(() => setLoading(false));
+  }, [slug]);
+
+  if (notFoundFlag) {
     notFound();
   }
 
-  const related = getRelatedPosts(slug, 3);
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-white">
+        <Header />
+        <div className="flex justify-center items-center py-40">
+          <Loader2 className="h-8 w-8 animate-spin text-gold" />
+        </div>
+        <Footer />
+      </main>
+    );
+  }
+
+  if (!post) return null;
 
   return (
     <main className="min-h-screen bg-white">
@@ -56,47 +86,47 @@ export default function BlogPostPage({
               <ArrowLeft className="h-4 w-4" />
               Back to Blog
             </Link>
-            <div className="flex items-center gap-3 mb-4">
-              <Badge className={getCategoryColor(post.category)}>
-                {post.category}
-              </Badge>
-            </div>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               {post.title}
             </h1>
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" />
-                {post.date}
+                {formatDate(post.publishedAt)}
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="h-4 w-4" />
-                {post.readTime}
+                {estimateReadTime(post.content)}
               </span>
+              {post.author?.name && (
+                <span className="text-gray-400">By {post.author.name}</span>
+              )}
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Featured Image */}
-      <div className="container mx-auto px-4 -mt-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-4xl mx-auto"
-        >
-          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-            <Image
-              src={post.image}
-              alt={post.imageAlt}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </motion.div>
-      </div>
+      {post.mainImageUrl && (
+        <div className="container mx-auto px-4 -mt-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={post.mainImageUrl}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* Article Content */}
       <section className="py-16">
@@ -106,21 +136,9 @@ export default function BlogPostPage({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="prose prose-lg max-w-none"
-            >
-              {post.content.map((paragraph, index) => (
-                <p
-                  key={index}
-                  className={`text-gray-700 leading-relaxed mb-5 ${
-                    paragraph.length < 60
-                      ? "font-semibold text-navy text-xl"
-                      : ""
-                  }`}
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </motion.div>
+              className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-gold"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
 
             {/* Share / Back */}
             <div className="mt-12 pt-8 border-t border-gray-200 flex items-center justify-between">
@@ -131,7 +149,9 @@ export default function BlogPostPage({
                 <ArrowLeft className="h-4 w-4" />
                 All Articles
               </Link>
-              <span className="text-sm text-gray-500">PROVEN — {post.date}</span>
+              <span className="text-sm text-gray-500">
+                PROVEN — {formatDate(post.publishedAt)}
+              </span>
             </div>
           </div>
         </div>
@@ -155,31 +175,28 @@ export default function BlogPostPage({
                 >
                   <Link href={`/blog/${relPost.slug}`} className="group block">
                     <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                      <div className="relative aspect-video">
-                        <Image
-                          src={relPost.image}
-                          alt={relPost.imageAlt}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
+                      <div className="relative aspect-video bg-gray-100">
+                        {relPost.mainImageUrl && (
+                          <Image
+                            src={relPost.mainImageUrl}
+                            alt={relPost.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        )}
                       </div>
                       <div className="p-5">
-                        <Badge
-                          className={`${getCategoryColor(relPost.category)} mb-2`}
-                        >
-                          {relPost.category}
-                        </Badge>
                         <h3 className="font-serif text-base font-semibold text-navy mb-2 group-hover:text-gold transition-colors line-clamp-2">
                           {relPost.title}
                         </h3>
                         <div className="flex items-center gap-3 text-xs text-gray-500">
                           <span className="flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
-                            {relPost.date}
+                            {formatDate(relPost.publishedAt)}
                           </span>
                           <span className="flex items-center gap-1">
                             <Clock className="h-3 w-3" />
-                            {relPost.readTime}
+                            {estimateReadTime(relPost.content)}
                           </span>
                         </div>
                         <span className="inline-flex items-center gap-1 text-gold text-xs font-medium mt-3 group-hover:gap-2 transition-all">
