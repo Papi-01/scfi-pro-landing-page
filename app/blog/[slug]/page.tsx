@@ -136,7 +136,7 @@ export default function BlogPostPage({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-gold"
+              className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-gold prose-img:rounded-xl prose-img:shadow-md prose-table:w-full prose-th:bg-navy prose-th:text-white prose-th:p-3 prose-td:p-3 prose-td:border prose-td:border-gray-200 prose-strong:text-navy"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
